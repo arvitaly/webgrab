@@ -1,0 +1,37 @@
+{
+  "name": "webgrab",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc && tslint --project tsconfig.json && jest --verbose --coverage",
+    "watch:test": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arvitaly/webgrab.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arvitaly/webgrab/issues"
+  },
+  "homepage": "https://github.com/arvitaly/webgrab#readme",
+  "dependencies": {
+    "@types/jsdom": "^11.0.2",
+    "@types/node-fetch": "^1.6.7",
+    "jsdom": "^11.2.0",
+    "node-fetch": "^1.7.3",
+    "page-grabber": "^0.3.24"
+  },
+  "jest": {},
+  "devDependencies": {
+    "@types/jest": "^20.0.8",
+    "coveralls": "^2.13.1",
+    "jest": "^21.1.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "peerDependencies": {}
+}
