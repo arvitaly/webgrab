@@ -26,7 +26,7 @@ const grab = (url, model) => __awaiter(this, void 0, void 0, function* () {
     const res = yield node_fetch_1.default(url);
     if (res.status !== 200) {
         throw new Error("Invalid request, url: " + url
-            + ", response status " + res.status + ":" + res.statusText + "\n" + (yield res.text()));
+            + ", response status " + res.status + ":" + res.statusText);
     }
     const html = yield res.text();
     const w = new jsdom_1.JSDOM(html).window;

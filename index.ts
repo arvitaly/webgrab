@@ -7,7 +7,7 @@ const grab = async <T> (url: string, model: T): Promise<T> => {
     if (res.status !== 200) {
         throw new Error(
             "Invalid request, url: " + url
-            + ", response status " + res.status + ":" + res.statusText + "\n" + (await res.text()));
+            + ", response status " + res.status + ":" + res.statusText);
     }
     const html = await res.text();
     const w = new JSDOM(html).window;
