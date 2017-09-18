@@ -1909,9 +1909,9 @@ p-locate@^2.0.0:
   dependencies:
     p-limit "^1.1.0"
 
-page-grabber@^0.3.24:
-  version "0.3.24"
-  resolved "https://registry.yarnpkg.com/page-grabber/-/page-grabber-0.3.24.tgz#4f4e72c6d39fd74cb2290c611a9248e0af2a892a"
+page-grabber@^0.3.25:
+  version "0.3.25"
+  resolved "https://registry.yarnpkg.com/page-grabber/-/page-grabber-0.3.25.tgz#9c06fe3a847d93ed3712969a591b1db533588fd0"
   dependencies:
     lodash "^4.15.0"
     tslint "^5.4.3"

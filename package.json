@@ -23,7 +23,7 @@
     "@types/node-fetch": "^1.6.7",
     "jsdom": "^11.2.0",
     "node-fetch": "^1.7.3",
-    "page-grabber": "^0.3.24"
+    "page-grabber": "^0.3.25"
   },
   "jest": {},
   "devDependencies": {
