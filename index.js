@@ -22,14 +22,25 @@ exports.nextUntil = page_grabber_1.nextUntil;
 exports.text = page_grabber_1.text;
 exports.val = page_grabber_1.val;
 const Grabber = require("page-grabber");
-const grab = (url, model) => __awaiter(this, void 0, void 0, function* () {
-    const res = yield node_fetch_1.default(url);
-    if (res.status !== 200) {
-        throw new Error("Invalid request, url: " + url
-            + ", response status " + res.status + ":" + res.statusText);
+exports.Grab = ({ fetch = node_fetch_1.default, method = "fetch" }) => (url, model) => __awaiter(this, void 0, void 0, function* () {
+    let html;
+    if (method === "fetch") {
+        const res = yield fetch(url);
+        if (res.status !== 200) {
+            throw new Error("Invalid request, url: " + url
+                + ", response status " + res.status + ":" + res.statusText);
+        }
+        html = yield res.text();
+        const w = new jsdom_1.JSDOM(html).window;
+        return Grabber(w).grab(model, w.document);
     }
-    const html = yield res.text();
-    const w = new jsdom_1.JSDOM(html).window;
-    return Grabber(w).grab(model, w.document);
+    else {
+        const WW = require("orbita").Window;
+        const w = new WW();
+        yield w.open(url);
+        const data = yield w.grab(model);
+        yield w.close();
+        return data;
+    }
 });
-exports.default = grab;
+exports.default = exports.Grab({});

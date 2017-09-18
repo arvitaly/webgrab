@@ -33,5 +33,7 @@
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "orbita": "^5.2.13"
+  }
 }

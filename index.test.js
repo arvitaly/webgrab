@@ -14,3 +14,9 @@ it("grab", () => __awaiter(this, void 0, void 0, function* () {
         title: _1.sel("title", _1.text()),
     })).toEqual({ title: "Google" });
 }));
+it("grab by electron", () => __awaiter(this, void 0, void 0, function* () {
+    const g = _1.Grab({ method: "electron" });
+    expect(yield g("https://google.com/", {
+        title: _1.sel("title", _1.text()),
+    })).toEqual({ title: "Google" });
+}));
