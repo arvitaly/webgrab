@@ -1,5 +1,4 @@
-# webgrab
-
+# webgrab - grab data from html page
 
 
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
@@ -9,13 +8,22 @@
 
     npm install webgrab --save
 
+    or
+
+    yarn add webgrab
+
 # Usage
 
-
+    import grab, { sel, text } from "webgrab";
+    grab("https://google.com/", {
+        title: sel("title", text()),
+    }).then((data)=>{
+        console.log(data.title);
+    });
 
 # API
 
-
+    All methods described here: https://github.com/arvitaly/page-grabber
 
 # Test
 
