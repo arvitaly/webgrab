@@ -449,9 +449,9 @@ chalk@^2.0.1:
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
 
-chan2@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/chan2/-/chan2-0.2.5.tgz#9a18131e51e145493043d5371bedbe4a14444260"
+chan2@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/chan2/-/chan2-0.2.6.tgz#3fca90c2cf317dc184ff5667d67390ea5b34cb3b"
 
 ci-info@^1.0.0:
   version "1.1.1"
@@ -2110,14 +2110,14 @@ optionator@^0.8.1:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-orbita@^5.2.13:
-  version "5.2.13"
-  resolved "https://registry.yarnpkg.com/orbita/-/orbita-5.2.13.tgz#9cdff56aa47ce34cfe3e6c5f9e5fbf66918b3fbc"
+orbita@^5.2.14:
+  version "5.2.14"
+  resolved "https://registry.yarnpkg.com/orbita/-/orbita-5.2.14.tgz#707edca1c934ac368fbccb0409b1f34e3e406c9d"
   dependencies:
     "@types/commander" "^2.9.1"
     "@types/node" "^7.0.13"
     "@types/node-ipc" "^9.0.0"
-    chan2 "^0.2.5"
+    chan2 "^0.2.6"
     commander "^2.9.0"
     electron "^1.6.10"
     node-ipc "^9.0.1"

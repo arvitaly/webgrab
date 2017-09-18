@@ -30,10 +30,11 @@
     "@types/jest": "^20.0.8",
     "coveralls": "^2.13.1",
     "jest": "^21.1.0",
+    "orbita": "^5.2.14",
     "tslint": "^5.7.0",
     "typescript": "^2.5.2"
   },
   "peerDependencies": {
-    "orbita": "^5.2.13"
+    "orbita": "^5.2.14"
   }
 }
