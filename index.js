@@ -34,8 +34,8 @@ exports.Grab = ({ fetch = node_fetch_1.default, method = "fetch" }) => (url, mod
         return fromHTML(html, model);
     }
     else {
-        const WW = require("orbita").Window;
-        const w = new WW();
+        const { Window } = yield Promise.resolve().then(function () { return require("orbita"); });
+        const w = new Window();
         yield w.open(url);
         const data = yield w.grab(model);
         yield w.close();

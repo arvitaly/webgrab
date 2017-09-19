@@ -1,6 +1,5 @@
 import { JSDOM } from "jsdom";
 import Fetch from "node-fetch";
-import { Window } from "orbita";
 export { sel, attr, obj, css, child, html, hasClass, IModel, GrabberO, nextUntil, text, val } from "page-grabber";
 import Grabber = require("page-grabber");
 export type REQUEST_TYPE = "fetch" | "electron";
@@ -17,8 +16,8 @@ export const Grab = ({ fetch = Fetch, method = "fetch" }: { method?: REQUEST_TYP
             html = await res.text();
             return fromHTML(html, model);
         } else {
-            const WW: typeof Window = require("orbita").Window;
-            const w = new WW();
+            const { Window } = await import("orbita");
+            const w = new Window();
             await w.open(url);
             const data = await w.grab(model);
             await w.close();
