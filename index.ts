@@ -15,8 +15,7 @@ export const Grab = ({ fetch = Fetch, method = "fetch" }: { method?: REQUEST_TYP
                     + ", response status " + res.status + ":" + res.statusText);
             }
             html = await res.text();
-            const w = new JSDOM(html).window;
-            return Grabber(w).grab(model, w.document);
+            return fromHTML(html, model);
         } else {
             const WW: typeof Window = require("orbita").Window;
             const w = new WW();
@@ -26,4 +25,8 @@ export const Grab = ({ fetch = Fetch, method = "fetch" }: { method?: REQUEST_TYP
             return data;
         }
     };
+export function fromHTML<T>(html: string, model: T) {
+    const w = new JSDOM(html).window;
+    return Grabber(w).grab(model, w.document);
+}
 export default Grab({});

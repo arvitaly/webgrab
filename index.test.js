@@ -20,3 +20,9 @@ it("grab by electron", () => __awaiter(this, void 0, void 0, function* () {
         title: _1.sel("title", _1.text()),
     })).toEqual({ title: "Google" });
 }));
+it("grab from html", () => __awaiter(this, void 0, void 0, function* () {
+    expect(_1.fromHTML("<div><div id=d1><a href=test>value</a></div></div>", _1.sel("#d1 a", {
+        href: _1.attr("href"),
+        text: _1.text(),
+    }))).toEqual({ href: "test", text: "value" });
+}));

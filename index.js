@@ -31,8 +31,7 @@ exports.Grab = ({ fetch = node_fetch_1.default, method = "fetch" }) => (url, mod
                 + ", response status " + res.status + ":" + res.statusText);
         }
         html = yield res.text();
-        const w = new jsdom_1.JSDOM(html).window;
-        return Grabber(w).grab(model, w.document);
+        return fromHTML(html, model);
     }
     else {
         const WW = require("orbita").Window;
@@ -43,4 +42,9 @@ exports.Grab = ({ fetch = node_fetch_1.default, method = "fetch" }) => (url, mod
         return data;
     }
 });
+function fromHTML(html, model) {
+    const w = new jsdom_1.JSDOM(html).window;
+    return Grabber(w).grab(model, w.document);
+}
+exports.fromHTML = fromHTML;
 exports.default = exports.Grab({});
